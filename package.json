@@ -1,0 +1,14 @@
+{
+  "name": "starter-stack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/codydwyer/starter-stack.git",
+  "author": "Cody Dwyer <cody.dwyer@thoughtworks.com>",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "client",
+    "schema",
+    "server"
+  ]
+}
