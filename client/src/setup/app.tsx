@@ -1,12 +1,24 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from '~/context';
-import { RootPage, ErrorPage } from '../pages';
+import { CreateUserPage, ErrorPage, LoginPage, RootPage, UserPage } from '../pages';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
+  },
+  {
+    path: '/users/:userId',
+    element: <UserPage />,
+  },
+  {
+    path: '/users/new/',
+    element: <CreateUserPage />,
   },
 ]);
 

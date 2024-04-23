@@ -10,5 +10,8 @@
     "client",
     "schema",
     "server"
-  ]
+  ],
+  "scripts": {
+    "dev": "yarn workspace client dev && yarn workspace server start"
+  }
 }

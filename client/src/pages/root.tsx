@@ -1,7 +1,7 @@
-import { Default } from '../templates';
+import { DefaultTemplate } from '../templates';
 
 const RootPage = () => {
-  return <Default />;
+  return <DefaultTemplate />;
 };
 
 export default RootPage;

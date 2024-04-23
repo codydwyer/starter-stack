@@ -19,11 +19,13 @@
         "paths": ["src"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
-      "alias": {
-        "map": [["~", "src"]],
-        "extensions": [".js", ".jsx", ".ts", ".d.ts", ".tsx"]
+      "typescript": {
+        "project": "./tsconfig.json",
       },
-      "typescript": {}
+      "alias": {
+        "map": [["~", path.resolve(__dirname, "./src")]],
+        "extensions": [".js", ".jsx", ".ts", ".d.ts", ".tsx"]
+      }
     }
   },
   "rules": {
