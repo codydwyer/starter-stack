@@ -24,29 +24,38 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
+const userDetailFragment = gql`
+  fragment UserDetail on User {
+    id
+    username
+  }
+`;
+
 export const getUser = async (id) => {
   const query = gql`
     query UserById($id: ID!){
       user(id: $id) {
-        id
-        username
+       ...UserDetail
       }
     }
+    ${userDetailFragment}
   `
 
   const { data } = await client.query({query, variables: { id }});
   return data.user
 }
 
-export const getUsers = async () => {
-  const query = gql`
-    query {
-      users {
-        id
-        username
-      }
+export const getUsersQuery = gql`
+  query {
+    users {
+      ...UserDetail
     }
-  `
+  }
+  ${userDetailFragment}
+`;
+
+export const getUsers = async () => {
+  const query = getUsersQuery;
 
   const { data } = await client.query({query});
   return data.users
@@ -56,10 +65,10 @@ export const createUser = async ({ username }) => {
   const mutation = gql`
     mutation CreateUser($input: CreateUserInput!) {
       user: createUser(input: $input) {
-        id
-        username
+        ...UserDetail
       }
     }
+    ${userDetailFragment}
   `
 
   const { data } = await client.mutate({mutation, variables: {
@@ -73,10 +82,10 @@ export const deleteUser = async ({ id }) => {
   const mutation = gql`
     mutation DeleteUser($input: DeleteUserInput!) {
       user: deleteUser(input: $input) {
-        id,
-        username
+        ...UserDetail
       }
     }
+    ${userDetailFragment}
   `
 
   const { data } = await client.mutate({mutation, variables: {
@@ -90,10 +99,10 @@ export const updateUser = async ({ id, username }) => {
   const mutation = gql`
     mutation UpdateUser($input: UpdateUserInput!) {
       user: updateUser(input: $input) {
-        id, 
-        username
+        ...UserDetail
       }
     }
+    ${userDetailFragment}
   `
 
   const { data } = await client.mutate({mutation, variables: {

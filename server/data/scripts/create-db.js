@@ -10,5 +10,4 @@ await schema.createTable('user', (table) => {
   table.text('createdAt').notNullable();
 });
 
-
 process.exit();
