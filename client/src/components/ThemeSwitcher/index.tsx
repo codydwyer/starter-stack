@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import ThemeContext from '~/context/theme';
-import Toggle from '../Toggle';
+import { Toggle } from '@codydwyer/global-design-system-react-components/dist/main';
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useContext(ThemeContext);

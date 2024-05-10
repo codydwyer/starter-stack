@@ -387,6 +387,11 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@codydwyer/global-design-system-react-components@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@codydwyer/global-design-system-react-components/-/global-design-system-react-components-0.0.1.tgz#e96ebd085f42537baa9d96d82575d87de76117a0"
+  integrity sha512-yaCI1fdVAE6Cah/Ykn7lodVj832EY2XSbWmqbHGvoaI/miE/eIi+OZBROqeWx9Y6+PB3kPXWd0Z3w0BZdI858A==
+
 "@colors/colors@1.6.0", "@colors/colors@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.6.0.tgz#ec6cd237440700bc23ca23087f513c75508958b0"

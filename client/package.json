@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.9.11",
+    "@codydwyer/global-design-system-react-components": "^0.0.1",
     "@reduxjs/toolkit": "^2.2.1",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
